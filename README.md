@@ -4,6 +4,8 @@
 
 ![](./public/assets/img/Screenshot_readme.png)
 
+[Ссылка на прод](https://galitskiy-galitskiy.ru/)
+
 # Роль и достижения:
 
 - Разработал фронтенд всех ключевых страниц (Главная, Вина, О нас) в соответствии с Pixel Perfect + адаптивы.
