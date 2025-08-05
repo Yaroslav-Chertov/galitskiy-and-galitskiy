@@ -1,0 +1,272 @@
+.content {
+    background: #f1f1f0;
+    position: relative;
+    margin-top: 328px;
+    overflow: hidden;
+    z-index: 4;
+}
+
+.content-header {
+    height: 326px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    pointer-events: none;
+    opacity: 1;
+    transition: 0.3s opacity;
+    z-index: 2;
+}
+
+.content-header.is-hide {
+    display: none;
+}
+
+.content-header span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    background: no-repeat center center;
+    background-size: cover;
+    opacity: 1;
+    transition: 0s opacity;
+    transition-delay: 1s;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+    }
+}
+
+.content-header span:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    background: #000000;
+    mix-blend-mode: multiply;
+    opacity: 0.3;
+    display: block;
+    content: '';
+}
+
+.content-header span.for-wines {
+    // background-image: url(/assets/top-wines.jpg);
+}
+
+.content-header span.for-about {
+    // background-image: url(/assets/top-about.jpg);
+}
+
+.is-wines .content-header,
+.is-about .content-header {
+    opacity: 1;
+}
+
+@media (max-width: 1679px) {
+    .content-header {
+        height: 280px;
+    }
+}
+
+@media (max-width: 767px) {
+    .content-header {
+        height: 220px;
+    }
+}
+
+.content-header--gallery {
+    height: 100vh;
+}
+
+.content-header--gallery:before {
+    display: none;
+}
+
+@media (max-width: 1679px) {
+    .content-header--gallery {
+        height: 100vh;
+    }
+}
+
+@media (max-width: 1439px) {
+    .content-header--gallery {
+        height: 100vh;
+    }
+}
+
+@media (max-width: 1023px) {
+    .content-header--gallery {
+        height: 70vh;
+    }
+}
+
+@media (max-width: 767px) {
+    .content-header--gallery {
+        height: 508px;
+    }
+}
+
+.content-gallery {
+    opacity: 1;
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #f1f1f0;
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;
+    transition: 0.3s opacity;
+    z-index: 2;
+}
+
+.content-gallery:before {
+    display: none;
+}
+
+@media (max-width: 1679px) {
+    .content-gallery {
+        height: 100vh;
+    }
+}
+
+@media (max-width: 1439px) {
+    .content-gallery {
+        height: 100vh;
+    }
+}
+
+@media (max-width: 1023px) {
+    .content-gallery {
+        height: 70vh;
+    }
+}
+
+@media (max-width: 767px) {
+    .content-gallery {
+        height: 508px;
+    }
+}
+
+.content-title {
+    position: absolute;
+    top: 100px;
+    left: 10px;
+    right: 10px;
+    text-align: center;
+    z-index: 3;
+}
+
+.content-title h1 {
+    font-family: mp, sans-serif;
+    font-size: 85px;
+    line-height: 85px;
+    letter-spacing: -0.02em;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+@media (max-width: 1439px) {
+    .content-title h1 {
+        font-size: 65px;
+        line-height: 65px;
+        letter-spacing: -0.02em;
+    }
+}
+
+@media (max-width: 1023px) {
+    .content-title h1 {
+        font-size: 55px;
+        line-height: 55px;
+        letter-spacing: -0.02em;
+    }
+}
+
+@media (max-width: 767px) {
+    .content-title h1 {
+        font-size: 30px;
+        line-height: 30px;
+        letter-spacing: -0.02em;
+    }
+}
+
+.content-title h2 {
+    margin: 10px 0 0;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    font-family: gp-lt-italic, sans-serif;
+    font-weight: 400;
+}
+
+@media (max-width: 1023px) {
+    .content-title h2 {
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 767px) {
+    .content-title h2 {
+        font-size: 20px;
+        line-height: 20px;
+        letter-spacing: 0.02em;
+    }
+}
+
+@media (max-width: 1439px) {
+    .content-title {
+        top: 100px;
+    }
+}
+
+@media (max-width: 1023px) {
+    .content-title {
+        top: 80px;
+    }
+}
+
+@media (max-width: 767px) {
+    .content-title {
+        top: 75px;
+    }
+}
+
+@media (max-width: 1679px) {
+    .content {
+        margin-top: 280px;
+    }
+}
+
+@media (max-width: 767px) {
+    .content {
+        margin-top: 220px;
+    }
+}
+
+.content--wine {
+    margin-top: 0;
+    background: #ffffff;
+}
+
+@media (max-width: 1679px) {
+    .content--wine {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .content--wine {
+        margin-top: 0;
+    }
+}

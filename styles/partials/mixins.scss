@@ -1,0 +1,102 @@
+@mixin scrollbar($thumb: #fff, $track: transparent, $margin: 0px) {
+    scrollbar-width: thin;
+    scrollbar-color: $thumb $track;
+
+    &::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+        border-radius: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: $track;
+        border-radius: 8px;
+        margin: $margin 0;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $thumb;
+        border-radius: 8px;
+    }
+}
+
+// font-face example - @include webfont('FF', 'ff');
+@mixin webfont($family, $file, $weight: normal, $style: normal) {
+	@font-face {
+		font-family: $family;
+		src: url('../fonts/' + $file + '.eot');
+		src: url('../fonts/' + $file + '.eot?#iefix') format('embedded-opentype'),
+			 url('../fonts/' + $file + '.woff') format('woff'),
+			 url('../fonts/' + $file + '.ttf') format('truetype'),
+			 url('../fonts/' + $file + '.svg') format('svg');
+		font-weight: $weight;
+		font-style: $style;
+		font-display: block;
+	}
+}
+
+// placeholder color
+@mixin placeholder($c) {
+	&::-webkit-input-placeholder {
+		color: $c;
+	}
+	&::-moz-placeholder {
+        color: $c;
+		opacity: 1;
+	}
+	&:-moz-placeholder {
+        color: $c;
+		opacity: 1;
+	}
+	&:-ms-input-placeholder {
+        color: $c;
+	}
+}
+
+// clearfix
+@mixin clearfix() {
+	&::before,
+	&::after {
+        display: block;
+		content: '';
+		height: 0;
+		overflow: hidden;
+		clear: both;
+	}
+}
+
+@mixin scrollbarClear() {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+
+    &::-webkit-scrollbar {
+        width: 0px;
+        height: 0px;
+        border-radius: 0px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: transparent;
+        border-radius: 0px;
+    }
+}
+
+
+//vertical stretch
+@mixin verticalStretch() {
+    display: flex;
+	flex-flow: column nowrap;
+	flex-grow: 1;
+}
+
+// clear button
+@mixin clearButton($font) {
+	background-color: transparent;
+	padding: 0;
+	border: none;
+	font-family: $font;
+}

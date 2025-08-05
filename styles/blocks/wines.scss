@@ -1,0 +1,165 @@
+
+.wines {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    position: relative;
+    padding: 100px 0;
+}
+
+.wines-holder {
+    position: relative;
+    z-index: 120;
+}
+
+.wines-title {
+    margin: 0 0 30px;
+    font-family: mp-bold, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.wines-menu {
+    font-family: gp-lt-disp, sans-serif;
+    font-weight: 400;
+    text-align: center;
+    position: relative;
+    line-height: 0;
+    z-index: 2;
+}
+
+.wines-menu div,
+.wines-menu a {
+    display: block;
+    color: #fff;
+    font-size: 85px;
+    line-height: 85px;
+    letter-spacing: -0.02em;
+    margin: 0 0 10px;
+    text-transform: uppercase;
+    border-bottom: solid 1px transparent;
+    transition: 0.3s border-bottom-color;
+    position: relative;
+}
+
+@media (max-width: 767px) {
+    .wines-menu div,
+    .wines-menu a {
+        font-size: 40px;
+        line-height: 40px;
+        letter-spacing: -0.02em;
+        margin: 0 0 15px;
+    }
+
+    .wines-menu div:last-child,
+    .wines-menu a:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.wines-name {
+    position: relative;
+    cursor: pointer;
+}
+
+[data-weather='sun'] .wines-name:hover {
+    color: #fff59f;
+}
+
+[data-weather='clouds'] .wines-name:hover {
+    color: #fff;
+}
+
+[data-weather='cloudy'] .wines-name:hover {
+    color: #ffe195;
+}
+
+[data-weather='drizzle'] .wines-name:hover {
+    color: #d5ffa0;
+}
+
+[data-weather='rain'] .wines-name:hover {
+    color: #d2f2ff;
+}
+
+[data-weather='snow'] .wines-name:hover {
+    color: #ffd1d1;
+}
+
+.wines-label {
+    top: 5px;
+    position: absolute;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+    font-family: gp-lt-italic, sans-serif;
+    font-weight: 400;
+    margin-left: 10px;
+    text-transform: none;
+}
+
+[data-weather='sun'] .wines-label {
+    color: #fff59f;
+}
+
+[data-weather='clouds'] .wines-label {
+    color: #fff;
+}
+
+[data-weather='cloudy'] .wines-label {
+    color: #ffe195;
+}
+
+[data-weather='drizzle'] .wines-label {
+    color: #d5ffa0;
+}
+
+[data-weather='rain'] .wines-label {
+    color: #d2f2ff;
+}
+
+[data-weather='snow'] .wines-label {
+    color: #ffd1d1;
+}
+
+.wines-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.wines-back span {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: no-repeat center center url(/assets/wine-back.jpg);
+    background-size: cover;
+    display: block;
+    opacity: 0;
+    transition: 0.3s opacity;
+}
+
+.wines-back span.is-active,
+.wines-back span.back {
+    opacity: 1;
+}
+
+@media (max-width: 1024px) {
+    .wines-back span.back {
+        background-size: auto 150%;
+    }
+}

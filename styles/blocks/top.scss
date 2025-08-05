@@ -1,0 +1,150 @@
+.top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 10px 0;
+    transform: translate(0);
+    z-index: 10;
+    pointer-events: none;
+}
+
+.is-main .top:before {
+    position: absolute;
+    display: block;
+    content: '';
+    background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+    mix-blend-mode: multiply;
+    opacity: 0.3;
+    height: 75vh;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.step-1 .top:before {
+    opacity: 0;
+}
+
+.is-wines .top,
+.is-wine .top,
+.is-about .top {
+    display: none;
+}
+
+.top-title {
+    line-height: 0;
+    display: block;
+    position: relative;
+    z-index: 2;
+}
+
+.top-title svg {
+    width: 100%;
+    height: auto;
+}
+
+[data-weather='sun'] .top-title svg [fill] {
+    fill: #fff59f;
+}
+
+[data-weather='clouds'] .top-title svg [fill] {
+    fill: #fff;
+}
+
+[data-weather='cloudy'] .top-title svg [fill] {
+    fill: #ffe195;
+}
+
+[data-weather='drizzle'] .top-title svg [fill] {
+    fill: #d5ffa0;
+}
+
+[data-weather='rain'] .top-title svg [fill] {
+    fill: #d2f2ff;
+}
+
+[data-weather='snow'] .top-title svg [fill] {
+    fill: #ffd1d1;
+}
+
+.top-subtitle {
+    margin: 0;
+    padding: 26px 0 25px;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+}
+
+[data-weather='sun'] .top-subtitle {
+    color: #fff59f;
+}
+
+[data-weather='clouds'] .top-subtitle {
+    color: #fff;
+}
+
+[data-weather='cloudy'] .top-subtitle {
+    color: #ffe195;
+}
+
+[data-weather='drizzle'] .top-subtitle {
+    color: #d5ffa0;
+}
+
+[data-weather='rain'] .top-subtitle {
+    color: #d2f2ff;
+}
+
+[data-weather='snow'] .top-subtitle {
+    color: #ffd1d1;
+}
+
+.top-subtitle span:first-child,
+.top-subtitle h1 {
+    display: block;
+    font-family: mp, sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: 0em;
+}
+
+@media (max-width: 767px) {
+    .top-subtitle span:first-child,
+    .top-subtitle h1 {
+        max-width: 220px;
+        margin: 0 auto;
+        font-size: 20px;
+        line-height: 21px;
+        letter-spacing: 0em;
+    }
+}
+
+.top-subtitle span:last-child,
+.top-subtitle h2 {
+    display: block;
+    font-family: gp-lt-disp, sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 25px;
+    letter-spacing: 0em;
+}
+
+@media (max-width: 767px) {
+    .top-subtitle span:last-child,
+    .top-subtitle h2 {
+        font-size: 20px;
+        line-height: 25px;
+        letter-spacing: 0em;
+    }
+}
+
+@media (max-width: 1023px) {
+    .top-subtitle {
+        padding-top: 90px;
+        padding-bottom: 30px;
+    }
+}

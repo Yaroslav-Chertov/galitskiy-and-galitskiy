@@ -1,0 +1,83 @@
+.step--vineyards,
+.step--wines {
+    position: relative;
+    z-index: 2;
+}
+
+.step--navigation {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    margin-bottom: 30vh;
+}
+
+.step--terruar {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    margin-bottom: 20vh;
+}
+
+.step-0 .main-about {
+    opacity: 1;
+}
+
+.step-0 .main-about-text {
+    opacity: 1;
+    transform: translate(0);
+}
+
+.step-0 .main-about-sub {
+    opacity: 1;
+    transition-delay: 0.3s;
+    transform: translate(0);
+}
+
+.step-0 .main > .info {
+    transform: translate(-50%, 60px);
+}
+
+.step-0 .header .info {
+    transform: translate(0);
+}
+
+.step-0 .menu a {
+    color: #fff;
+}
+
+.step-0 .menu a span:after {
+    background: #fff;
+}
+
+.step-0 .logo svg path {
+    fill: #fff;
+}
+
+.step-0 .burger svg line {
+    stroke: #fff;
+}
+
+.step-1 .start {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.step-3 .vineyards-title.--fixed {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+.step-3 .vineyards-area {
+    opacity: 1;
+    transition-delay: 0.5s;
+    transform: translate(0);
+}
+
+.step-3 .vineyards-photo {
+    opacity: 1;
+    transition-delay: 0.25s;
+    transform: translate(0);
+    filter: blur(0);
+}

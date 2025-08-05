@@ -1,0 +1,104 @@
+.buy {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.buy-notes {
+    margin-top: auto;
+    padding: 0 35px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.02em;
+}
+
+@media (max-width: 1439px) {
+    .buy-notes {
+        font-size: 15px;
+        line-height: 20px;
+        letter-spacing: -0.02em;
+        padding: 0;
+    }
+}
+
+.buy-item {
+    margin: 0 auto 45px;
+    max-width: 480px;
+    text-align: center;
+}
+
+.buy-item:first-child {
+    margin-top: 45px;
+}
+
+.buy-item__title {
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    margin: 0 0 15px;
+}
+
+.buy-item__text {
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.02em;
+    margin: 0 0 15px;
+}
+
+.buy-item__link {
+    font-family: gp-lt-italic, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+}
+
+[data-weather='sun'] .buy-item__link a {
+    color: #fff59f;
+}
+
+[data-weather='clouds'] .buy-item__link a {
+    color: #fff;
+}
+
+[data-weather='cloudy'] .buy-item__link a {
+    color: #ffe195;
+}
+
+[data-weather='drizzle'] .buy-item__link a {
+    color: #d5ffa0;
+}
+
+[data-weather='rain'] .buy-item__link a {
+    color: #d2f2ff;
+}
+
+[data-weather='snow'] .buy-item__link a {
+    color: #ffd1d1;
+}
+
+[data-weather='sun'] .buy-item__link a span:after {
+    background: #fff59f;
+}
+
+[data-weather='clouds'] .buy-item__link a span:after {
+    background: #ffffff;
+}
+
+[data-weather='cloudy'] .buy-item__link a span:after {
+    background: #ffe195;
+}
+
+[data-weather='drizzle'] .buy-item__link a span:after {
+    background: #d5ffa0;
+}
+
+[data-weather='rain'] .buy-item__link a span:after {
+    background: #d2f2ff;
+}
+
+[data-weather='snow'] .buy-item__link a span:after {
+    background: #ffd1d1;
+}

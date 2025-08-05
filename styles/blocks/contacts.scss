@@ -1,0 +1,110 @@
+.contacts {
+    padding: 45px 0;
+    text-align: center;
+}
+
+.contacts__email {
+    display: block;
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -0.02em;
+    margin: 0 0 20px;
+}
+
+@media (max-width: 1439px) {
+    .contacts__email {
+        font-size: 30px;
+        line-height: 35px;
+        letter-spacing: -0.02em;
+    }
+}
+
+.contacts__email a {
+    color: #fff;
+}
+
+.contacts__email a span:after {
+    background: #ffffff;
+}
+
+.contacts__map-link {
+    display: block;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+    color: #fff;
+    margin: 0 0 20px;
+}
+
+.contacts__map-link a {
+    font-family: gp-lt-italic, sans-serif;
+    font-weight: 400;
+}
+
+[data-weather='sun'] .contacts__map-link a {
+    color: #fff59f;
+}
+
+[data-weather='clouds'] .contacts__map-link a {
+    color: #fff;
+}
+
+[data-weather='cloudy'] .contacts__map-link a {
+    color: #ffe195;
+}
+
+[data-weather='drizzle'] .contacts__map-link a {
+    color: #d5ffa0;
+}
+
+[data-weather='rain'] .contacts__map-link a {
+    color: #d2f2ff;
+}
+
+[data-weather='snow'] .contacts__map-link a {
+    color: #ffd1d1;
+}
+
+[data-weather='sun'] .contacts__map-link a span:after {
+    background: #fff59f;
+}
+
+[data-weather='clouds'] .contacts__map-link a span:after {
+    background: #ffffff;
+}
+
+[data-weather='cloudy'] .contacts__map-link a span:after {
+    background: #ffe195;
+}
+
+[data-weather='drizzle'] .contacts__map-link a span:after {
+    background: #d5ffa0;
+}
+
+[data-weather='rain'] .contacts__map-link a span:after {
+    background: #d2f2ff;
+}
+
+[data-weather='snow'] .contacts__map-link a span:after {
+    background: #ffd1d1;
+}
+
+.spaces {
+    padding: 45px 0;
+    text-align: center;
+}
+
+.spaces__title {
+    font-size: 50px;
+    line-height: 40px;
+    letter-spacing: -0.02em;
+    margin: 0 0 20px;
+}
+
+@media (max-width: 1439px) {
+    .spaces__title {
+        font-size: 30px;
+        line-height: 35px;
+        letter-spacing: -0.02em;
+    }
+}

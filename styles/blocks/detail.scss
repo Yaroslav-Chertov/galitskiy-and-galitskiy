@@ -1,0 +1,261 @@
+.detail {
+    display: none;
+    background: #f1f1f0;
+    color: #000;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 41.6666666667vw;
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+.detail::-webkit-scrollbar {
+    display: none;
+}
+
+@media (max-width: 1023px) {
+    .detail {
+        width: auto;
+        right: 0;
+        z-index: 1001;
+    }
+}
+
+.detail__close {
+    display: none;
+}
+
+@media (max-width: 1023px) {
+    .detail__close {
+        cursor: pointer;
+        position: absolute;
+        left: 0;
+        top: 10px;
+        z-index: 1025;
+        display: block;
+    }
+}
+
+.detail__cover {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    transition: 0.5s height;
+    background: no-repeat center center;
+    background-size: cover;
+    z-index: 1020;
+}
+
+.detail__logo {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 1025;
+}
+
+.detail__logo svg,
+.detail__logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.detail__logo svg [fill],
+.detail__logo img [fill] {
+    fill: #fff;
+}
+
+@media (max-width: 1023px) {
+    .detail__logo svg,
+    .detail__logo img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 1023px) {
+    .detail__logo {
+        top: 10px;
+    }
+}
+
+.detail__content .blog-post__info {
+    min-height: 33.3333333333vh;
+    padding: 10px 150px 10px 10px;
+}
+
+@media (max-width: 1439px) {
+    .detail__content .blog-post__info {
+        min-height: 25vh;
+        padding-bottom: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .detail__content .blog-post__info {
+        padding: 10px;
+        min-height: auto;
+    }
+}
+
+.detail__date {
+    font-family: gp-lt-italic, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+    color: #000;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+@media (max-width: 1023px) {
+    .detail__date {
+        position: static;
+        display: block;
+        margin: 0 0 20px;
+    }
+}
+
+.detail__text {
+    width: 50vw;
+    padding: 0 0 100px 10px;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.02em;
+    font-family: mp, sans-serif;
+    font-weight: 400;
+}
+
+.detail__text img {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+.detail__text p {
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.02em;
+    margin: 1em 0;
+}
+
+.detail__text p:first-child {
+    margin-top: 0;
+}
+
+.detail__text p:last-child {
+    margin-bottom: 0;
+}
+
+.detail__text h2,
+.detail__text h3 {
+    margin: 2em 0 1em;
+    font-family: mp-bold, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.02em;
+}
+
+.detail__text h2:first-child,
+.detail__text h3:first-child {
+    margin-top: 0;
+}
+
+.detail__text h2:last-child,
+.detail__text h3:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 1023px) {
+    .detail__text {
+        width: 83.3333333333vw;
+        padding-bottom: 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    .detail__text {
+        width: auto;
+        margin-right: 55px;
+        font-size: 15px;
+        line-height: 20px;
+        letter-spacing: -0.02em;
+    }
+}
+
+.detail__sound {
+    position: fixed;
+    right: 41.6666666667vw;
+    top: 15px;
+    margin-right: 10px;
+    z-index: 1025;
+}
+
+@media (max-width: 1023px) {
+    .detail__sound {
+        position: absolute;
+        right: 10px;
+    }
+}
+
+.detail__header {
+    mix-blend-mode: exclusion;
+}
+
+@media (max-width: 1023px) {
+    .detail__header {
+        z-index: 1025;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+}
+
+.detail__share {
+    position: fixed;
+    right: 41.6666666667vw;
+    bottom: 0;
+    padding: 0 10px;
+    z-index: 1011;
+}
+
+@media (max-width: 1023px) {
+    .detail__share {
+        right: 0;
+    }
+}
+
+.detail__share a {
+    display: block;
+    text-decoration: none;
+    padding: 15px;
+    text-align: center;
+    line-height: 0;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+}
+
+.detail__share a:last-child {
+    border-bottom: 0;
+}
+
+@media (max-width: 767px) {
+    .detail__share a {
+        padding: 15px 9px;
+    }
+}
+
+.detail.is-active .detail__cover {
+    height: 50vh;
+}
+
+.details.hide {
+    display: none;
+}

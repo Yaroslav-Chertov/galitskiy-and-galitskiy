@@ -1,0 +1,142 @@
+
+@media (max-width: 1023px) {
+    .is-popup .burger,
+    .is-popup .burger svg [stroke] {
+        stroke: #fff;
+    }
+
+    .is-popup .menu > div.is-active .submenu {
+        border-top: solid 1px rgba(255, 255, 255, 0.5);
+    }
+
+    .is-popup .logo svg [fill] {
+        fill: #fff;
+    }
+
+    .is-popup .header > .info .sound span:before {
+        background: #ffffff;
+    }
+}
+
+@media (max-width: 1023px) {
+    .is-popup[data-popup='yellow'] .burger,
+    .is-popup[data-popup='yellow'] .burger svg [stroke] {
+        stroke: #000;
+    }
+
+    .is-popup[data-popup='yellow'] .menu > div.is-active .submenu {
+        border-top: solid 1px rgba(0, 0, 0, 0.5);
+    }
+
+    .is-popup[data-popup='yellow'] .logo svg [fill] {
+        fill: #000;
+    }
+
+    .is-popup[data-popup='yellow'] .header > .info .sound span:before {
+        background: #000000;
+    }
+}
+
+.is-popup[data-popup='yellow'] .popup {
+    color: #000;
+}
+
+
+@media (max-width: 768px) {
+    .is-popup {
+        .burger,
+        .info {
+            transform: none !important;
+        }
+    }
+}
+
+[data-weather='sun'] .is-popup[data-popup='yellow'] .popup {
+    background: #fff59f;
+}
+
+[data-weather='clouds'] .is-popup[data-popup='yellow'] .popup {
+    background: #ffffff;
+}
+
+[data-weather='cloudy'] .is-popup[data-popup='yellow'] .popup {
+    background: #ffe195;
+}
+
+[data-weather='drizzle'] .is-popup[data-popup='yellow'] .popup {
+    background: #deffb5;
+}
+
+[data-weather='rain'] .is-popup[data-popup='yellow'] .popup {
+    background: #b6e9ff;
+}
+
+[data-weather='snow'] .is-popup[data-popup='yellow'] .popup {
+    background: #ffd1d1;
+}
+
+.is-popup[data-popup='yellow'] .popup__close svg [stroke] {
+    stroke: #000;
+}
+
+.is-popup[data-popup='yellow'] .popup__close svg [fill] {
+    fill: #000;
+}
+
+
+.step.step--start {
+    // will-change: height, visibility, opacity;
+}
+
+body.step-2 {
+    .step.step--start {
+        .start, .main-about {
+            display: none;
+            /* visibility: hidden;
+            opacity: 0 !important; */
+        }
+
+    }
+}
+
+body .is-404-block,
+body .is-404-flex {
+    display: none;
+}
+
+body.is-404 {
+    #app {
+        display: none;
+    }
+
+    .welcome {
+        display: block !important;
+    }
+
+    .is-404-block {
+        display: block !important;
+    }
+
+    .is-404-flex {
+        display: flex !important;
+    }
+}
+
+body.is-loading {
+    .burger,
+    .menu,
+    .header .info,
+    #app {
+        visibility: hidden !important;
+    }
+}
+
+
+@media (max-width: 1023px) {
+    body.is-404 {
+        .menu-left,
+        .menu-right {
+            visibility: hidden;
+        }
+    }
+}

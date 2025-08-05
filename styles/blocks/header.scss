@@ -1,0 +1,177 @@
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 326px;
+    padding: 0;
+    pointer-events: none;
+    overflow: hidden;
+    transition: none;
+}
+
+.is-detail .header {
+    transition: 0.3s right;
+    right: 41.6vw;
+    height: 85px !important;
+}
+
+@media (max-width: 1023px) {
+    .is-detail .header {
+        right: 0;
+    }
+}
+
+.is-404 .header {
+    z-index: 1250;
+}
+
+.is-404.is-menu .header {
+    z-index: 1350;
+}
+
+@media (max-width: 1023px) {
+    .header {
+        z-index: 1010;
+    }
+}
+
+.header a {
+    pointer-events: auto;
+}
+
+.is-wine .header {
+    height: 80px !important;
+}
+
+@media (max-width: 1023px) {
+    .is-popup .header:before {
+        position: absolute;
+        display: block;
+        content: '';
+        left: 10px;
+        right: 10px;
+        top: 64px;
+        height: 1px;
+        background: rgb(255, 255, 255);
+        opacity: 0.2;
+    }
+}
+
+.is-popup[data-popup='yellow'] .header:before {
+    background: rgb(0, 0, 0);
+}
+
+.is-popup.is-detail .header:before {
+    display: none;
+}
+
+.panel .header {
+    z-index: 12;
+}
+
+@media (max-width: 1679px) {
+    .header {
+        height: 280px;
+    }
+}
+
+@media (max-width: 1023px) {
+    .is-popup .header {
+        height: 105px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .header {
+        height: 220px;
+    }
+}
+
+.main {
+    position: relative;
+    z-index: 5;
+}
+
+.logo {
+    display: block;
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translate(-50%);
+    line-height: 0;
+    
+    a {
+        width: 70px;
+    }
+}
+
+body:not(.is-main) .logo {
+    top: 15px !important;
+}
+
+@media (max-width: 1023px) {
+    body:not(.is-main) .logo {
+        top: 10px !important;
+    }
+
+    body:not(.is-main) .logo svg {
+        width: 40px !important;
+        height: 40px !important;
+    }
+}
+
+.logo svg [fill] {
+    transition: 0.3s all;
+}
+
+[data-weather='sun'] .logo svg [fill] {
+    fill: #fff59f;
+}
+
+[data-weather='clouds'] .logo svg [fill] {
+    fill: #fff;
+}
+
+[data-weather='cloudy'] .logo svg [fill] {
+    fill: #ffe195;
+}
+
+[data-weather='drizzle'] .logo svg [fill] {
+    fill: #d5ffa0;
+}
+
+[data-weather='rain'] .logo svg [fill] {
+    fill: #d2f2ff;
+}
+
+[data-weather='snow'] .logo svg [fill] {
+    fill: #ffd1d1;
+}
+
+.is-wine .logo svg [fill] {
+    fill: #000;
+}
+
+.is-wines .logo svg [fill],
+.is-about .logo svg [fill] {
+    fill: #fff;
+}
+
+.is-detail .logo {
+    opacity: 0;
+}
+
+@media (max-width: 1023px) {
+    .logo {
+        top: 10px;
+    }
+
+    .logo svg {
+        width: 64px;
+        height: 64px;
+    }
+}

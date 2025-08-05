@@ -1,0 +1,173 @@
+
+body,
+html {
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    font-variant-numeric: proportional-nums;
+    background: #ffffff;
+    overscroll-behavior-y: none;
+    font-family: mp, sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+    letter-spacing: -0.02em;
+    overscroll-behavior: none;
+}
+
+[data-season='summer'] .is-main {
+    background: #3a4639;
+}
+
+[data-season='autumn'] .is-main {
+    background: #423b30;
+}
+
+[data-season='winter'] .is-main {
+    background: #2d303c;
+}
+
+[data-season='spring'] .is-main {
+    background: #3a4639;
+}
+
+.holder {
+    position: relative;
+    width: 100vw;
+    height: calc(100 * var(--vh)); // высота без учета адресной строки на айфоне
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: none;
+}
+
+#app {
+    overscroll-behavior: none;
+}
+
+.holder::-webkit-scrollbar {
+    display: none;
+}
+
+.is-lock .holder {
+    overflow: hidden;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    outline: none;
+}
+
+.burger {
+    cursor: pointer;
+}
+
+body {
+    min-width: 320px;
+}
+
+@media (max-width: 767px) {
+    .hide-mobile {
+        display: none !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .hide-desktop {
+        display: none !important;
+    }
+}
+
+.start {
+    line-height: 0;
+    width: 100%;
+    position: relative;
+    pointer-events: none;
+}
+
+.step-1 .start {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.start img {
+    width: 100%;
+}
+
+[data-season='winter'] .start--summer,
+[data-season='spring'] .start--summer,
+[data-season='autumn'] .start--summer,
+[data-season='summer'] .start--winter,
+[data-season='spring'] .start--winter,
+[data-season='autumn'] .start--winter,
+[data-season='summer'] .start--spring,
+[data-season='winter'] .start--spring,
+[data-season='autumn'] .start--spring,
+[data-season='summer'] .start--autumn,
+[data-season='winter'] .start--autumn,
+[data-season='spring'] .start--autumn {
+    display: none;
+}
+
+
+.notransition,
+.notransition * {
+    -o-transition: none !important;
+    -ms-transition: none !important;
+    -moz-transition: none !important;
+    -webkit-transition: none !important;
+    transition: none !important;
+}
+
+.hide {
+    display: none;
+}
+
+
+
+.fade-enter-active,
+.fade-leave-active {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+}
+
+.fade-enter-to {
+    opacity: 1;
+    z-index: 2;
+}
+
+.page-leave-active .summary {
+    opacity: 0;
+}
+
+.page-leave-from,
+.page-leave-to {
+    opacity: 1;
+}
+
+.page-enter-from {
+    opacity: 0;
+}
+
+.page-enter-to {
+    opacity: 1;
+}

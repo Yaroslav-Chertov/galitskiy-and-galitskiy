@@ -1,0 +1,55 @@
+
+.burger {
+    display: none;
+    top: 15px;
+    left: 10px;
+    position: absolute;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.burger svg [stroke] {
+    stroke: #fff;
+}
+
+[data-weather='sun'] .is-main:not(.step-0) .burger svg [stroke] {
+    stroke: #fff59f;
+}
+
+[data-weather='clouds'] .is-main:not(.step-0) .burger svg [stroke] {
+    stroke: #fff;
+}
+
+[data-weather='cloudy'] .is-main:not(.step-0) .burger svg [stroke] {
+    stroke: #ffe195;
+}
+
+[data-weather='drizzle'] .is-main:not(.step-0) .burger svg [stroke] {
+    stroke: #d5ffa0;
+}
+
+[data-weather='rain'] .is-main:not(.step-0) .burger svg [stroke] {
+    stroke: #d2f2ff;
+}
+
+[data-weather='snow'] .is-main:not(.step-0) .burger svg [stroke] {
+    stroke: #ffd1d1;
+}
+
+.is-wine .burger svg [stroke] {
+    stroke: #000;
+}
+
+.burger svg line {
+    transition: 0.3s all;
+}
+
+@media (max-width: 1023px) {
+    .burger {
+        display: block;
+    }
+}
+
+.is-detail .burger {
+    display: none;
+}

@@ -1,0 +1,437 @@
+.terruar {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #d1d1cb;
+    color: #fff;
+    display: block;
+}
+
+.terruar-header {
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    clip: rect(auto, auto, auto, auto);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+}
+
+.terruar-top {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden;
+}
+
+[data-season='summer'] .terruar-top {
+    background: #3a4639;
+}
+
+[data-season='autumn'] .terruar-top {
+    background: #423b30;
+}
+
+[data-season='winter'] .terruar-top {
+    background: #2d303c;
+}
+
+[data-season='spring'] .terruar-top {
+    background: #3a4639;
+}
+
+@media (max-width: 767px) {
+    .terruar-top {
+        max-height: 50%;
+    }
+}
+
+.terruar-top video {
+    width: 100vw;
+    height: 100%;
+    top: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.terruar-top:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    content: '';
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+@media (max-width: 600px) {
+    .terruar-top video {
+        width: 100%;
+        height: 50vh;
+    }
+}
+
+.terruar-small {
+    position: absolute;
+    left: 50%;
+    width: 159px;
+    height: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    background: no-repeat center top;
+    background-size: 100% auto;
+}
+
+@media (max-height: 675px) {
+    .terruar-small {
+        top: 55%;
+    }
+}
+
+@media (max-height: 600px) {
+    .terruar-small {
+        top: 60%;
+    }
+}
+
+@media (max-width: 767px) {
+    .terruar-small {
+        top: 50%;
+        max-height: none;
+        width: 115px;
+    }
+}
+
+.terruar-small--forest {
+    background-image: url(/assets/forest-small.jpg);
+}
+
+.terruar-small--fauna {
+    background-image: url(/assets/fauna-small.jpg);
+}
+
+.terruar-small--ground {
+    background-image: url(/assets/ground-small.jpg);
+}
+
+.terruar-small--sea {
+    background-image: url(/assets/sea-small.jpg);
+}
+
+.terruar-small--climat {
+    background-image: url(/assets/climat-small.jpg);
+}
+
+.terruar-left {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    text-align: left;
+    opacity: 0;
+    transform: translate(20px);
+    transition: 0.3s all;
+    transition-delay: 0s;
+}
+
+.terruar-left div {
+    display: flex;
+    margin: 0 0 2px;
+}
+
+.terruar-left div:last-child {
+    margin-bottom: 0;
+}
+
+.terruar-left div span {
+    white-space: nowrap;
+}
+
+.terruar-left div span:first-child {
+    font-family: mp-bold, sans-serif;
+    font-weight: 400;
+    width: 200px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+}
+
+.terruar-left div span:last-child {
+    font-family: gp-lt-italic, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+}
+
+.terruar-right {
+    font-family: mp, sans-serif;
+    width: 50%;
+    right: 10px;
+    bottom: 10px;
+    position: absolute;
+    text-align: left;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    display: block;
+    align-items: flex-end;
+    color: #000;
+    opacity: 0;
+    transform: translate(40px);
+    transition: 0s all;
+    transition-delay: 0s;
+}
+
+@media (max-width: 767px) {
+    .terruar-right {
+        top: auto;
+        left: 10px;
+        width: auto;
+        right: 10px;
+        bottom: 10px;
+        overflow: auto;
+        transform: translateY(30px);
+        max-height: calc(50% - 115px);
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        -webkit-overflow-scrolling: touch;
+        font-size: 18px;
+        line-height: 25px;
+        letter-spacing: -0.02em;
+    }
+
+    .terruar-right::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.terruar .navigation-title {
+    position: fixed;
+    top: 95px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+@media (max-width: 767px) {
+    .terruar .navigation-title {
+        top: 95px;
+    }
+}
+
+.terruar-title {
+    position: fixed;
+    top: 180px;
+    left: 50%;
+    transform: translate(-50%);
+    display: block;
+    white-space: nowrap;
+    font-family: gp-lt-disp, sans-serif;
+    font-weight: 400;
+    font-size: 85px;
+    line-height: 85px;
+    letter-spacing: -0.02em;
+    z-index: 10;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s opacity;
+}
+
+.terruar--1 .terruar-title {
+    opacity: 1 !important;
+}
+
+@media (max-width: 1439px) {
+    .terruar-title {
+        top: 160px;
+        font-size: 65px;
+        line-height: 65px;
+        letter-spacing: -0.02em;
+    }
+}
+
+@media (max-width: 767px) {
+    .terruar-title {
+        top: 135px;
+        font-size: 40px;
+        line-height: 40px;
+        letter-spacing: -0.02em;
+    }
+}
+
+.terruar--1 {
+    z-index: 65;
+}
+
+.terruar--2 {
+    z-index: 75;
+}
+
+.terruar--3 {
+    z-index: 85;
+}
+
+.terruar--4 {
+    z-index: 95;
+}
+
+.terruar--5 {
+    z-index: 105;
+}
+
+.is-animate .terruar .terruar-left {
+    opacity: 1;
+    transform: translate(0);
+    transition-delay: 0s;
+}
+
+.is-animate .terruar .terruar-right {
+    opacity: 1;
+    transform: translate(0);
+    transition-delay: 0.2s;
+}
+
+.is-animate .terruar .terruar-title {
+    opacity: 1;
+    transition-delay: 0.3s;
+}
+
+.is-animate .terruar .terruar-animatic-line {
+    stroke-dashoffset: 0;
+    transition-delay: 0.2s;
+}
+
+.is-animate .terruar .terruar-animatic-text-1 {
+    opacity: 1;
+    transform: translate(0);
+    transition-delay: 0.5s;
+}
+
+.is-animate .terruar .terruar-animatic-text-2 {
+    opacity: 1;
+    transform: translate(0);
+    transition-delay: 0.8s;
+}
+
+[data-weather='sun'] .is-animate .terruar .terruar-animatic path[fill] {
+    fill: #fff59f;
+}
+
+[data-weather='clouds'] .is-animate .terruar .terruar-animatic path[fill] {
+    fill: #fff;
+}
+
+[data-weather='cloudy'] .is-animate .terruar .terruar-animatic path[fill] {
+    fill: #ffe195;
+}
+
+[data-weather='drizzle'] .is-animate .terruar .terruar-animatic path[fill] {
+    fill: #d5ffa0;
+}
+
+[data-weather='rain'] .is-animate .terruar .terruar-animatic path[fill] {
+    fill: #d2f2ff;
+}
+
+[data-weather='snow'] .is-animate .terruar .terruar-animatic path[fill] {
+    fill: #ffd1d1;
+}
+
+[data-weather='sun'] .is-animate .terruar .terruar-animatic path[stroke] {
+    stroke: #fff59f;
+}
+
+[data-weather='clouds'] .is-animate .terruar .terruar-animatic path[stroke] {
+    stroke: #fff;
+}
+
+[data-weather='cloudy'] .is-animate .terruar .terruar-animatic path[stroke] {
+    stroke: #ffe195;
+}
+
+[data-weather='drizzle'] .is-animate .terruar .terruar-animatic path[stroke] {
+    stroke: #d5ffa0;
+}
+
+[data-weather='rain'] .is-animate .terruar .terruar-animatic path[stroke] {
+    stroke: #d2f2ff;
+}
+
+[data-weather='snow'] .is-animate .terruar .terruar-animatic path[stroke] {
+    stroke: #ffd1d1;
+}
+
+.terruar-animatic {
+    position: absolute;
+    z-index: 10;
+    top: 105px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    max-width: 1000px;
+    line-height: 0;
+}
+
+@media (max-width: 767px) {
+    .terruar-animatic {
+        top: 50%;
+        width: calc(100vw - 20px);
+        max-width: 355px;
+    }
+}
+
+.terruar-animatic svg {
+    width: 100%;
+    height: auto;
+}
+
+.terruar-animatic-line {
+    stroke-dasharray: 300px;
+    stroke-dashoffset: 300px;
+    transition: 0.3s all;
+}
+
+.terruar--climat .terruar-animatic-line {
+    stroke-dasharray: 800px;
+    stroke-dashoffset: 800px;
+}
+
+.terruar--ground .terruar-animatic-line {
+    stroke-dasharray: 1200px;
+    stroke-dashoffset: 1200px;
+}
+
+.terruar--fauna .terruar-animatic-line {
+    stroke-dasharray: 2000px;
+    stroke-dashoffset: 2000px;
+}
+
+.terruar--sea .terruar-animatic-line {
+    stroke-dasharray: 1600px;
+    stroke-dashoffset: 1600px;
+}
+
+.terruar-animatic-text-1,
+.terruar-animatic-text-2 {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.5s all;
+}

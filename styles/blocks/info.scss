@@ -1,0 +1,154 @@
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    transition: 0.7s transform;
+    z-index: 3;
+    pointer-events: auto;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+}
+
+.info .i {
+    width: 35px;
+    height: 35px;
+    position: relative;
+    border-radius: 50%;
+    border: solid 1px;
+    line-height: 0;
+    cursor: pointer;
+    margin: -1px 0 -1px 12px;
+    transition: 0.2s all;
+}
+
+body:not(.is-main) .info .i {
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+}
+
+[data-weather='sun'] .info .i {
+    border-color: #fff59f;
+}
+
+[data-weather='clouds'] .info .i {
+    border-color: #fff;
+}
+
+[data-weather='cloudy'] .info .i {
+    border-color: #ffe195;
+}
+
+[data-weather='drizzle'] .info .i {
+    border-color: #d5ffa0;
+}
+
+[data-weather='rain'] .info .i {
+    border-color: #d2f2ff;
+}
+
+[data-weather='snow'] .info .i {
+    border-color: #ffd1d1;
+}
+
+[data-weather='sun'] .info .i {
+    background: #fff59f;
+}
+
+[data-weather='clouds'] .info .i {
+    background: #ffffff;
+}
+
+[data-weather='cloudy'] .info .i {
+    background: #ffe195;
+}
+
+[data-weather='drizzle'] .info .i {
+    background: #d5ffa0;
+}
+
+[data-weather='rain'] .info .i {
+    background: #d2f2ff;
+}
+
+[data-weather='snow'] .info .i {
+    background: #ffd1d1;
+}
+
+.info .i:hover {
+    width: 41px;
+    height: 41px;
+    margin: -4px -3px -4px 9px;
+}
+
+.info .i svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.is-main .header .info {
+    transform: translate(90px);
+}
+
+@media (max-width: 1023px) {
+    .is-main .header .info {
+        transition: none !important;
+        transform: translate(0);
+    }
+}
+
+.is-main .main > .info {
+    position: fixed;
+    bottom: 25px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 25;
+    top: auto;
+    right: auto;
+}
+
+@media (max-width: 1023px) {
+    .is-main .main > .info {
+        display: none;
+    }
+}
+
+.header .info .i {
+    border-color: #fff;
+    background: none;
+}
+
+.is-wine .header .info .i {
+    border-color: #000;
+}
+
+.header .info .i svg path {
+    fill: #fff;
+}
+
+.is-wine .header .info .i svg path {
+    fill: #000;
+}
+
+@media (max-width: 1023px) {
+    .header .info .i {
+        display: none;
+    }
+}
+
+.is-popup .info {
+    right: calc(41.6vw + 10px);
+}
+
+@media (max-width: 1023px) {
+    .is-popup .info {
+        right: 10px;
+    }
+}
+
+.is-popup.is-detail .info {
+    right: 10px;
+}

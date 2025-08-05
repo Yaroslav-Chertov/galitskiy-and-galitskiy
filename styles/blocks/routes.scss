@@ -1,0 +1,54 @@
+/* ROUTE STYLES */
+[data-route="main"] {
+    .main {
+        // padding-bottom: 100vh;
+    }
+}
+
+[data-route="about"] {
+    &[data-state="0"] {
+        .about-top {
+            visibility: hidden;
+        }
+    }
+
+    &[data-state="1"] {
+        .about-top, .about-gallery {
+            visibility: hidden;
+        }
+    }
+
+    &[data-state="2"] {
+        .about-top, .about-gallery {
+            visibility: hidden;
+        }
+    }
+}
+
+.is-about {
+    [href="/about"],
+    [href="/about/"] {
+        pointer-events: none !important;
+    }
+
+    .panel {
+        [href="/about"],
+        [href="/about/"] {
+            opacity: 0.3;
+        }
+    }
+}
+
+.is-wines {
+    [href="/wines"],
+    [href="/wines/"] {
+        pointer-events: none !important;
+    }
+
+    .panel {
+        [href="/wines"],
+        [href="/wines/"] {
+            opacity: 0.3;
+        }
+    }
+}
