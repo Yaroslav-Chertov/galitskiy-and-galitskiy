@@ -1,6 +1,6 @@
 import DOMFactory, { dqsa } from './utils/DOM.js';
 import ScrollController from './app/ScrollController.js';
-import { Welcome } from './animations/Welcome.js';
+import { Welcome } from './animations/welcome.js';
 import { AnimateWinesAbout } from './animations/WinesAbout.js';
 import { initFilterWines } from './app/filterWines.js';
 import Router, { matches } from './app/Router.js';
