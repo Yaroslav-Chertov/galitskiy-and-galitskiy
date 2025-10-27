@@ -4,7 +4,7 @@
 [🌐 Перейти на сайт](https://galitskiy-galitskiy.ru/)  
 [🔒 Исходный код (приватный репозиторий, доступ по запросу)](https://github.com/Yaroslav-Chertov/galitskiy-and-galitskiy)
 
-![](./Screenshot_readme.png)
+![](./public/assets/img/Screenshot_readme.png)
 
 ---
 
