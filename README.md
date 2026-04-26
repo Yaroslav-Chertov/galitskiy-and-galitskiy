@@ -18,7 +18,7 @@
 
 | Слой | Технология |
 |---|---|
-| UI | Vue 3, TypeScript |
+| UI | JavaScript, JSX (jtsx-loader) |
 | Стили | SCSS (Sass) |
 | Сервер | Node.js, Express 5 |
 | Сборка | Gulp 5, esbuild |
@@ -134,6 +134,6 @@ npm run server
 ## Другие проекты
 
 - [Structura — SaaS-планер продуктивности](https://github.com/Yaroslav-Chertov/structura) — Next.js 16, React 19, TypeScript, ЮKassa, Resend
-- [ONY Career Page](https://github.com/Yaroslav-Chertov/ony-agency) — SSR + интеграция Bitrix API, React
+- [ONY Career Page](https://github.com/Yaroslav-Chertov/ony-agency) — SSR + интеграция Bitrix API, JSX
 - [Стажер Онлайн — HR-платформа](https://github.com/Yaroslav-Chertov/hr-platform) — Vue.js + SCSS + Django + REST API
 - [Movies Explorer](https://github.com/Yaroslav-Chertov/movies-explorer-frontend) — Fullstack: React + Node.js + Express + MongoDB + JWT
